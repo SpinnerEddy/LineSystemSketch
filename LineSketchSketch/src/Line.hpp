@@ -9,5 +9,11 @@
 #define Line_hpp
 
 #include <stdio.h>
+#include "ofMain.h"
+#include "Particle.hpp"
+
+class Line{
+    
+};
 
 #endif /* Line_hpp */
