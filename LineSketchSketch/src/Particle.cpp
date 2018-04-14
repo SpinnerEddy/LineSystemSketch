@@ -56,7 +56,9 @@ void Particle::applyForce(ofVec2f force){
 }
 
 void Particle::display(){
-    
+    ofSetColor(this->c,this->lifeSpan);
+    ofNoFill();
+    ofDrawEllipse(this->position.x,this->position.y,this->radius,this->radius);
 }
 
 void Particle::connect(vector<Particle*> ps){
