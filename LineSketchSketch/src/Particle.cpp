@@ -89,3 +89,7 @@ ofVec2f Particle::getPosition(){
 ofColor Particle::getColor(){
     return c;
 }
+
+float Particle::getLifeSpan(){
+    return lifeSpan;
+}
