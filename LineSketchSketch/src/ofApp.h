@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "Particle.hpp"
 #include "Line.hpp"
+#include "LineSystem.hpp"
 
 class ofApp : public ofBaseApp{
 
@@ -24,6 +25,5 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-        vector<Particle*> particles;
-        vector<Line*> lines;
+        LineSystem* lineSystem;
 };
