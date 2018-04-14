@@ -50,6 +50,7 @@
 		2F684641B4BBE11A06531927 /* btConvexConvexAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D53DE5AD7888CA3AD9DCE23E /* btConvexConvexAlgorithm.cpp */; };
 		2F9D4E315CA20A4F1274927E /* ofxBulletTriMeshShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFE7C58549D461DD80661125 /* ofxBulletTriMeshShape.cpp */; };
 		3048A23B2081F8930057BDB2 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3048A2392081F8930057BDB2 /* Particle.cpp */; };
+		3048A23F208246640057BDB2 /* Line.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3048A23D208246640057BDB2 /* Line.cpp */; };
 		3080731C1D78E70B1C48FB55 /* b2EdgeShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDD74998DF22C837A0F32C1F /* b2EdgeShape.cpp */; };
 		323573DDCF31A84141C43A22 /* Bullet-C-API.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEDCA5A19E0BB51A0ADD06C3 /* Bullet-C-API.cpp */; };
 		32602EB644C4AEB234053926 /* b2ChainAndPolygonContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3177A900C25276B08EDF82B1 /* b2ChainAndPolygonContact.cpp */; };
@@ -364,6 +365,8 @@
 		2F872B24C251C2FCD8DE85DB /* btAlignedAllocator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = btAlignedAllocator.cpp; path = ../../../../addons/ofxBullet/libs/bullet2.8.2/include/LinearMath/btAlignedAllocator.cpp; sourceTree = SOURCE_ROOT; };
 		3048A2392081F8930057BDB2 /* Particle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
 		3048A23A2081F8930057BDB2 /* Particle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Particle.hpp; sourceTree = "<group>"; };
+		3048A23D208246640057BDB2 /* Line.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Line.cpp; sourceTree = "<group>"; };
+		3048A23E208246640057BDB2 /* Line.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Line.hpp; sourceTree = "<group>"; };
 		310D231C0E485BBF8C6E56F1 /* btInternalEdgeUtility.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = btInternalEdgeUtility.cpp; path = ../../../../addons/ofxBullet/libs/bullet2.8.2/include/BulletCollision/CollisionDispatch/btInternalEdgeUtility.cpp; sourceTree = SOURCE_ROOT; };
 		3177A900C25276B08EDF82B1 /* b2ChainAndPolygonContact.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = b2ChainAndPolygonContact.cpp; path = ../../../../addons/ofxBox2d/libs/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp; sourceTree = SOURCE_ROOT; };
 		31C71A51CBDF3A27ABE10B09 /* btPersistentManifold.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = btPersistentManifold.h; path = ../../../../addons/ofxBullet/libs/bullet2.8.2/include/BulletCollision/NarrowPhaseCollision/btPersistentManifold.h; sourceTree = SOURCE_ROOT; };
@@ -1711,6 +1714,8 @@
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 				3048A2392081F8930057BDB2 /* Particle.cpp */,
 				3048A23A2081F8930057BDB2 /* Particle.hpp */,
+				3048A23D208246640057BDB2 /* Line.cpp */,
+				3048A23E208246640057BDB2 /* Line.hpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -2086,6 +2091,7 @@
 				68F8D1ED5D7B09364305C64D /* btHingeConstraint.cpp in Sources */,
 				4C7F7BC93854B5AE243E0D34 /* btGeneric6DofConstraint.cpp in Sources */,
 				546F06DD73102A164C19DE9E /* btUniversalConstraint.cpp in Sources */,
+				3048A23F208246640057BDB2 /* Line.cpp in Sources */,
 				4DC5B23362FFF9748AAF2842 /* btSolve2LinearConstraint.cpp in Sources */,
 				DBE2D895D6A59C951D40DCB0 /* btHinge2Constraint.cpp in Sources */,
 				0B333277BC107B96F9D964BF /* btPoint2PointConstraint.cpp in Sources */,
