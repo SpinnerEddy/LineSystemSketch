@@ -12,8 +12,11 @@ Particle::Particle(){
 }
 
 Particle::Particle(float x,float y){
+    this->direct = ofRandom(TWO_PI);
     this->position.set(x,y);
-    this->velocity.set(ofRandom(-2,2),ofRandom(-2,2));
+//    this->velocity.set(ofRandom(-2,2),ofRandom(-2,2));
+    this->velocity.set(cos(this->direct),sin(this->direct));
+    this->velocity *= 15;
     this->acceleration.set(0,0);
     this->c.setHsb(ofRandom(255), 255, 255);
     this->angle = 0;

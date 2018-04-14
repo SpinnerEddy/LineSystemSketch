@@ -18,6 +18,7 @@ protected:
     ofVec2f acceleration;
     ofColor c;
     float radius;
+    float direct;
     float angle;
     float mass;
     float lifeSpan;

@@ -8,6 +8,7 @@ ofApp::~ofApp(){
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofBackground(0);
+    ofSetBackgroundAuto(false);
     ofSetFrameRate(60);
     ofEnableSmoothing();
     ofSetWindowTitle("LineSystem");
@@ -25,7 +26,15 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    this->fadeBackground();
     this->lineSystem->display();
+}
+
+//--------------------------------------------------------------
+void ofApp::fadeBackground(){
+    ofFill();
+    ofSetColor(255,60);
+    ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
 }
 
 //--------------------------------------------------------------
