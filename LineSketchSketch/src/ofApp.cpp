@@ -6,6 +6,10 @@ ofApp::~ofApp(){
         delete particles[i];
         this->particles.erase(this->particles.begin()+i);
     }
+    for(int i = lines.size()-1; i >= 0; i--){
+        delete lines[i];
+        this->lines.erase(this->lines.begin()+i);
+    }
 }
 
 //--------------------------------------------------------------
@@ -17,21 +21,26 @@ void ofApp::setup(){
     ofEnableSmoothing();
     ofEnableBlendMode(ofBlendMode::OF_BLENDMODE_ADD);
     
-    this->particles.push_back(new Particle(ofGetWidth()/2,ofGetHeight()/2));
+//    this->particles.push_back(new Particle(ofGetWidth()/2,ofGetHeight()/2));
+    this->lines.push_back(new Line(ofGetWidth()/2,ofGetHeight()/2));
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    this->particles.push_back(new Particle(ofGetWidth()/2,ofGetHeight()/2));
-    for(int i = this->particles.size()-1; i >= 0; i--){
-        this->particles[i]->update();
+    this->lines.push_back(new Line(ofGetWidth()/2,ofGetHeight()/2));
+    for(int i = this->lines.size()-1; i >= 0; i--){
+        this->lines[i]->update();
+        if(this->lines[i]->isDead()){
+            delete lines[i];
+            this->lines.erase(this->lines.begin()+i);
+        }
     }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    for(int i = this->particles.size()-1; i >= 0; i--){
-        this->particles[i]->display();
+    for(int i = this->lines.size()-1; i >= 0; i--){
+        this->lines[i]->display();
     }
 }
 

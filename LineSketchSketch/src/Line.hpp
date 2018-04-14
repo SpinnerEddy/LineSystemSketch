@@ -13,7 +13,18 @@
 #include "Particle.hpp"
 
 class Line{
-    
+private:
+    Particle* particle1;
+    Particle* particle2;
+//    ofVec2f* center;
+    ofColor lineColor;
+    float lifeSpan;
+public:
+    Line(float x,float y);
+    ~Line();
+    void update();
+    void display();
+    bool isDead();
 };
 
 #endif /* Line_hpp */

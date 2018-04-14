@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "Particle.hpp"
+#include "Line.hpp"
 
 class ofApp : public ofBaseApp{
 
@@ -24,5 +25,5 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
         vector<Particle*> particles;
-    
+        vector<Line*> lines;
 };

@@ -35,5 +35,6 @@ public:
     void applyForce(ofVec2f force);
     ofVec2f getPosition();
     ofColor getColor();
+    float getLifeSpan();
 };
 #endif /* Particle_hpp */
