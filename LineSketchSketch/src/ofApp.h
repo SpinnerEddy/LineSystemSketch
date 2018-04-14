@@ -1,10 +1,12 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Particle.hpp"
 
 class ofApp : public ofBaseApp{
 
 	public:
+        ~ofApp();
 		void setup();
 		void update();
 		void draw();
@@ -21,4 +23,6 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+        vector<Particle*> particles;
+    
 };

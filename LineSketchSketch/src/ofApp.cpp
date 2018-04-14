@@ -1,18 +1,38 @@
 #include "ofApp.h"
 
 //--------------------------------------------------------------
-void ofApp::setup(){
+ofApp::~ofApp(){
+    for(int i = particles.size()-1; i >= 0; i--){
+        delete particles[i];
+        this->particles.erase(this->particles.begin()+i);
+    }
+}
 
+//--------------------------------------------------------------
+void ofApp::setup(){
+    ofBackground(0);
+    ofSetFrameRate(60);
+    ofEnableSmoothing();
+    ofSetWindowTitle("LineSystem");
+    ofEnableSmoothing();
+    ofEnableBlendMode(ofBlendMode::OF_BLENDMODE_ADD);
+    
+    this->particles.push_back(new Particle(ofGetWidth()/2,ofGetHeight()/2));
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+    this->particles.push_back(new Particle(ofGetWidth()/2,ofGetHeight()/2));
+    for(int i = this->particles.size()-1; i >= 0; i--){
+        this->particles[i]->update();
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+    for(int i = this->particles.size()-1; i >= 0; i--){
+        this->particles[i]->display();
+    }
 }
 
 //--------------------------------------------------------------
